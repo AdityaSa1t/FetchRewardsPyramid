@@ -1,8 +1,7 @@
 # Fetch Rewards - Pyramid Word Web Service - Aditya Sawant
 ### Description: A web service that takes in a string and returns a boolean to indicate whether a word is a pyramid word.  A word is a ‘pyramid’ word if you can arrange the letters in increasing frequency, starting with 1 and continuing without gaps and without duplicates.
-####```Examples: Banana is a pyramid word because you have 1 'b', 2 'n's, and 3 'a's.``` 
-
-####```Bandana is not a pyramid word because you have 1 'b' and 1 'd'.```
+```Examples: Banana is a pyramid word because you have 1 'b', 2 'n's, and 3 'a's.``` 
+```Bandana is not a pyramid word because you have 1 'b' and 1 'd'.```
 
 
 ## Instructions
