@@ -10,7 +10,6 @@ import java.util.*;
 public class PyramidService {
 
     Map<Character,Integer> pyrMap =  new HashMap<Character,Integer>();
-    Map<Character,Boolean> charPresence = new HashMap<Character, Boolean>();
     List<Integer> valResult;
     Boolean result;
 
@@ -22,9 +21,8 @@ public class PyramidService {
         //A list to hold arithmetic progression of 1 to N, where N = number of characters.
         List<Integer> arthProg = new ArrayList<Integer>();
 
-        //Clearing hashmaps so that each time an API call is made, it acts only on the given input.
+        //Clearing hashmap so that each time an API call is made, it acts only on the given input.
         pyrMap.clear();
-        charPresence.clear();
 
         //Converting to lowercase to maintain consistency in character count.
         s=s.toLowerCase();
@@ -32,11 +30,10 @@ public class PyramidService {
         //Check if input is empty. If empty, return false. Else, find the characters and their frequency.
         if(!s.isEmpty()){
             for (int i=0;i<s.length();i++){
-                if(pyrMap.containsKey(s.charAt(i)) && charPresence.get(s.charAt(i))){
+                if(pyrMap.containsKey(s.charAt(i))){
                     pyrMap.put(s.charAt(i),pyrMap.get(s.charAt(i))+1);
                 } else {
                     pyrMap.put(s.charAt(i),1);
-                    charPresence.put(s.charAt(i),true);
                     index++;
                     arthProg.add(index);
                 }
